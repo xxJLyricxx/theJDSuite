@@ -25,6 +25,29 @@
         </style>
     </head>
     <body>
+        <nav>
+            <ul class="topnav" #id="dropDownClick">
+                <li>
+                    <a href="home">Home</a>
+                </li>
+                <li>
+                    <a href="news">News</a>
+                </li>
+                <li>
+                    <a href="contact">Contact</a>
+                </li>
+                <li>
+                    <a href="about">About</a>
+                </li>
+                <li class="topnav-right">
+                    <a href="signup">Sign Up</a>
+                </li>
+                <li class="topnav-right">
+                    <a href="signin">Sign in</a>
+                </li>
+                <li class="dropDownIcon"><a href="javasript:void(0);" onclick="">&#9776;</a></li>
+            </ul>
+        </nav>
     <!-- this is a title-->
         <!-- this is just general text displayed at the top of the screen-->
         <p class="introduction">The purpose of this website is to practice HTML skills and to maintain proficiency. Watch me grow!</p>
@@ -56,9 +79,11 @@
             
             <tr>
                 <td>
-                    <button>
-                        Professional
-                    </button>
+                    <a href="professional.html">
+                        <button>
+                            Professional
+                        </button>
+                    </a>
                 </td>
                 <td>
                     <button>
@@ -130,6 +155,19 @@
             <input type="text"><br><br>
             <button> SUBMIT </button>
         </form>
+    
+        <script>
+            function dropdownMenu(){
+                var x = document.getElementById("dropDownClick");
+                if (x.className === "topnav") {
+                    x.className += "responsive";
+                /* change topnav to topnav.responsive*/ 
+                }
+                else{
+                    x.className = "topnav";
+                }
+            }
+        </script>
 
     </body>
 </html>
