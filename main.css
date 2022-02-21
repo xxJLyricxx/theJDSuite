@@ -1,19 +1,20 @@
 body {
-    background: linear-gradient(to left, blue,black) ;
-    color: gray;
+/*    background: linear-gradient(to left, blue,black) ;*/
+    background-color: dimgray;
+    color: rgb(255, 251, 251);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 nav,header,footer {
     display: block;
 
 }
 h1 {
-    color: gray;
+    color: whitesmoke;
     text-align: center;
 }
 
 .introduction {
-    color: gray;
+    color: whitesmoke;
     text-align: center;
 
 }
@@ -25,10 +26,11 @@ nav{
 }
 
 nav ul {
-    background-color: #eeee;
+    background-color: black;
     overflow: hidden;
     margin: 0;
     padding: 0;
+    border-radius: 8px;
 
 }
 
@@ -48,42 +50,48 @@ ul.topnav li a{
     text-align: center;
     padding: 16px;
     text-transform: Uppercase;
-    color: #666; 
+    color: white; 
+    border-radius: 12px;
 }
 ul.topnav li a:hover {
-    background-color: #0080ff;
+    background-color: #084e94;
     color: white;
+    box-shadow: 0 12px 16px 0 white, 0 17px 50px 0 white;
+    opacity: 0.5;
+    transition: 0.5s;
+    
 }
 ul.topnav li.dropDownIcon{
     display: none;
 
 }
 h2 {
-    color: gray;
+    color: whitesmoke;
+     
 }
 
 p {
-    color: gray;
+    color: whitesmoke;
 }
 
 table {
-    color: gray;
+    color: whitesmoke;
 }
 
 hr {
-    color: gray;
+    color: whitesmoke;
 }
 
 ol {
-    color: gray;
+    color: whitesmoke;
 }
 
 h3 {
-    color: gray;
+    color: whitesmoke;
 }
 
 form {
-        color: gray;
+        color: whitesmoke;
 }
 
 
