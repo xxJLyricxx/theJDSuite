@@ -1,6 +1,6 @@
 body {
 /*    background: linear-gradient(to left, blue,black) ;*/
-    background-color: dimgray;
+    background-color: black;
     color: rgb(255, 251, 251);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -8,9 +8,26 @@ nav,header,footer {
     display: block;
 
 }
+.TopButton{
+
+    width: 100px;
+    border-radius: 50px;
+    float: left;
+    margin-bottom: auto;
+    box-shadow: 0px 0px 10px white;
+   
+
+
+}
 h1 {
     color: whitesmoke;
     text-align: center;
+}
+.FirstBox{
+    height: 800px;
+    width: 100%;
+    background-color: white;
+
 }
 
 .introduction {
@@ -28,8 +45,8 @@ nav{
 nav ul {
     background-color: black;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 100px;
     border-radius: 8px;
 
 }
@@ -96,7 +113,7 @@ form {
 
 
 /* #################### MOBILE ######################### */
-@media screen and (max-width 680px) {
+@media screen and (max-width: 680px) {
     ul.topnav li:not(:nth-child(1)) {
         display:none;
     }
