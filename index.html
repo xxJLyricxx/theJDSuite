@@ -3,26 +3,19 @@
     <!-- This is how you edit the text that appears in the tab-->
     <head>
         <link rel="stylesheet" href="main.css">
-        <table>
-            <h1> Welcome To the suite</h1>
-        </table>
-        <title>Welcome To the JD Suite
-
+        <title>
+            Welcome To the JD Suite
         </title>
 
-        <!-- This is css. This edits the default for images in css. Default class setting.-->
-        <style>
-        .introduction{
-            font-weight: bold;
-        }
-        </style>
         <img src="bluesuitman.jpg" alt="Logo Draft" class = TopButton>
     </head>
     <body>
+        <h1>
+            Welcome to the Suite
+        </h1>
         <nav>
             <ul class="topnav" #id="dropDownClick">
                 
-
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -30,7 +23,7 @@
                     <a href="professional.html">Professional</a>
                 </li>
                 <li>
-                    <a href="contact">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
                 <li>
                     <a href="about">About</a>
@@ -41,18 +34,23 @@
                 <li class="topnav-right">
                     <a href="signin">Sign in</a>
                 </li>
+                <li>
+                    <a href="testpage.html">Test Page</a>
+                </li>
                 <li class="dropDownIcon"><a href="javasript:void(0);" onclick="">&#9776;</a></li>
             </ul>
         </nav>
-        <div class = "containter">
-            <div class="block">
-                <h3>Title 1</h3>
+        <div class="row">
+            <div class="col-6">
                 <img src="bluenredme.jpg.jpg">
-                <p>This is just a test of what should happen when text is displayed in this box. It SHOULD be wrapped around in a box but... well you know how that's gonna go... 'NOT'</p>
             </div>
-        </div> 
-        <img src="bluenredme.jpg.jpg" alt="initphoto">
-        
+            <div class="col-6">
+                <div class="quote">
+                   " I was not designed to fail. "
+                </div>
+            </div>
+        </div>
+<!--
         <h3>
             Sign In
         </h3>
@@ -68,7 +66,7 @@
             <input type="text"><br><br>
             <button> SUBMIT </button>
         </form>
-    
+-->
         <script>
             function dropdownMenu(){
                 var x = document.getElementById("dropDownClick");
