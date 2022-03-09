@@ -6,16 +6,48 @@ body {
     min-width: 1500px;
     max-width: 1501px;
 }
+
 /* ROW */
 .row{
     display: flex;
     width: 100%;
 }
+
 .row::after {
     display: block;
     clear: both;
     content: "";
 }
+
+/* This is for the sliding buttons on 'contact.html'*/
+.wrapper {
+    position: absolute;
+    width: 300px;
+    height: 200px; 
+    /*border: 1px solid white;
+    background-color: red;*/
+    overflow: hidden;
+    border-radius: 50px;
+}
+/*this is the 'id' descriptor*/
+#slide {
+    position: relative;
+    left: -300px;
+    width: 300px;
+    height: 100px;
+    background: blue;
+    transition: 1s;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.wrapper:hover #slide {
+    transition: 1s;
+    left: 0;
+    
+}
+/* end sliding buttons animations and such */
+
 /* Column Sections */
 .col-1{width: 8.33%;}
 .col-2{width: 16.66;}
