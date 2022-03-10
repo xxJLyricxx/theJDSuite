@@ -24,8 +24,8 @@ body {
     position: absolute;
     width: 300px;
     height: 200px; 
-    /*border: 1px solid white;
-    background-color: red;*/
+    border: 1px solid white;
+    background-color: red;
     overflow: hidden;
     border-radius: 50px;
 }
@@ -34,7 +34,7 @@ body {
     position: relative;
     left: -300px;
     width: 300px;
-    height: 100px;
+    height: 200px;
     background: blue;
     transition: 1s;
     overflow: hidden;
