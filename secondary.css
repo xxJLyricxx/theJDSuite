@@ -1,0 +1,24 @@
+.square{
+    height: 50px;
+    width: 100px;
+    float: left;
+    text-align: center;
+}
+.square2{
+    height: 50px;
+    width: 100px;
+    float: left;
+    text-align: center;
+}
+.bigsquare{
+    display:block;
+    width: 220px;
+    margin: 0;
+}
+.bigsquare ul{
+    overflow: hidden;
+    margin: 0px;
+    padding: 5px;
+    border-radius: 8px;
+    list-style-type: none;
+}
