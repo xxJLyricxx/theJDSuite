@@ -16,7 +16,7 @@
             "request": "launch",
             "name": "Open programs.html",
             "file": "c:\\Users\\jonat\\OneDrive\\Documents\\GitHub\\theJDSuite\\theJDSuite\\programs.html"
-        }
+        },
         {
             "type": "chrome",
             "request": "launch",
