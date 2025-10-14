@@ -19,6 +19,24 @@ body {
   padding: 0 0 0 20px; /* Top, Right, Bottom are 0, Left is 20px */
   font-family: Courier, monospace;
 }
+#resultantBox {
+    border: 2px solid red;
+    min-width: 300px;          /* start width */
+    max-width: 800px;          /* stop expanding after this width */
+    height: 200px;             /* fixed height */
+    padding: 10px;             /* space inside */
+    overflow-y: auto;          /* scroll vertically if too tall */
+    overflow-x: hidden;        /* no horizontal scroll */
+    white-space: pre-wrap;     /* allow wrapping normally */
+    display: inline-block;     /* allows width to adjust */
+    box-sizing: border-box;    /* padding included in width */
+  }
+
+  /* Expanding mode — no wrapping while width is growing */
+  #resultantBox.expanding {
+    white-space: nowrap;       /* don't wrap text */
+    overflow-x: visible;       /* allow width to grow */
+  }
 
 /* .row::after {
     display: block;

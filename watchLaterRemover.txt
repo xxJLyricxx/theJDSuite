@@ -1,0 +1,48 @@
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+function removeWatchLaterVideoNew(index = 0) {
+    let videos = document.querySelectorAll('ytd-playlist-video-renderer');
+    if (!videos[index]) return console.log('Video not found at index', index);
+
+    // Open the menu
+    let menuBtn = videos[index].querySelector('#menu button');
+    if (!menuBtn) return console.log('Menu button not found for this video');
+    menuBtn.click();
+
+    // Wait briefly for the menu to appear, then click "Remove from Watch Later"
+    setTimeout(() => {
+        let removeBtn = document.querySelector('ytd-menu-service-item-renderer.style-scope.ytd-menu-popup-renderer:nth-child(3)');
+        let removeBtn0 = document.querySelector('ytd-menu-service-item-renderer.style-scope.ytd-menu-popup-renderer:nth-child(0)');
+        let removeBtn1 = document.querySelector('ytd-menu-service-item-renderer.style-scope.ytd-menu-popup-renderer:nth-child(1)');
+        if (removeBtn) {
+            console.log("trying video 3");
+            removeBtn.click();
+            console.log(`Removed video at index ${index}`);
+        } else {
+            if (removeBtn0) {
+                console.log("trying video 0");
+                removeBtn0.click();
+                console.log(`Removed video at index ${index}`);
+            } else {
+                if (removeBtn1) {
+                    console.log("trying video 1");
+                    removeBtn1.click();
+                    console.log(`Removed video at index ${index}`);
+                } else {
+                    console.log('Remove button not found');
+                }
+            }
+        }
+    }, 500); // 500ms delay for menu to open
+}
+
+async function WatchLaterRemove(num) {
+    for (let i = 1; i <= num; i++) {
+        removeWatchLaterVideoNew(0);
+        console.log('Iteration', i);
+        await delay(1000 + (i%100));
+    }
+    console.log('Done!');
+}
+
+WatchLaterRemove(500);
