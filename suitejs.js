@@ -272,8 +272,9 @@
     }
 
     async function fetchFileAndSetConstant() {
-        console.log("Button Clicked")
+        console.log("Button Clicked");
         try {
+            console.log("Button Clicked");
             const response = await fetch('watchLaterRemover.txt');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -281,17 +282,33 @@
             // get the file content
             const yTRemoverText = await response.text();
 
-            //Copy it to the clipboard
-            await navigator.clipboard.writeText(yTRemoverText)
-            .then(() => {
-                alert("Text copied to clipboard.");
-                }
-            )
-            .catch(err => {
-                console.error('Failed to copy text: ', err);
-                alert("Failed to copy text.");
-                }
-            );
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(yTRemoverText);
+                console.log("✅ Copied using Clipboard API");
+            } else {
+                // Fallback for non-HTTPS or unsupported browsers
+                const textArea = document.createElement("textarea");
+                textArea.value = yTRemoverText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textArea);
+                console.log("✅ Copied using fallback method");
+                console.log("Test");
+            }
+
+
+            // //Copy it to the clipboard
+            // await navigator.clipboard.writeText(yTRemoverText)
+            // .then(() => {
+            //     alert("Text copied to clipboard.");
+            //     }
+            // )
+            // .catch(err => {
+            //     console.error('Failed to copy text: ', err);
+            //     alert("Failed to copy text.");
+            //     }
+            // );
             
             // const fileContent = await response.text();
             // const MY_CONSTANT_WEB = fileContent;
