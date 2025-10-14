@@ -272,12 +272,12 @@
     }
 
     async function fetchFileAndSetConstant() {
+        console.log("Button Clicked")
         try {
             const response = await fetch('watchLaterRemover.txt');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             } 
-
             // get the file content
             const yTRemoverText = await response.text();
 
