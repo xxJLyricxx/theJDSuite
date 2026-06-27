@@ -118,6 +118,7 @@ select {
 
 .page-shell {
   width: min(100% - 2rem, var(--container-width));
+  min-height: 100dvh;
   margin: 0 auto;
 }
 
@@ -257,4 +258,129 @@ select {
 
 .rounded-lg {
   border-radius: var(--radius-lg);
+}
+
+.section-divider {
+  width: min(100%, 1100px);
+  height: 1px;
+  margin: 2rem auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+}
+
+.page-load {
+  animation: pageFadeIn 600ms ease-out both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: revealUp 700ms ease-out forwards;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #7aa7ff,
+    #dbe7ff,
+    #ffffff
+  );
+  background-size: 250%;
+  background-position: left;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 5s ease-in-out infinite;
+}
+
+.animate-down {
+  opacity: 0;
+  transform: translateY(-24px);
+  animation: fadeSlideDown 800ms ease-out forwards;
+}
+
+.animate-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeSlideUp 800ms ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 500ms;
+}
+
+.delay-2 {
+  animation-delay: 700ms;
+}
+
+.delay-3 {
+  animation-delay: 3000ms;
+}
+
+.media-card-button {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  text-decoration: none;
+}
+
+.media-card-button:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes fadeSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: left;
+  }
+
+  50% {
+    background-position: right;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
