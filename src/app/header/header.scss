@@ -1,0 +1,49 @@
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 8px;
+}
+ul.topnav li {
+    color: white;
+    list-style: none;
+    float: left;
+}
+ul.topnav li.logo {
+    color: rgb(193, 5, 5);
+    list-style: none;
+    float: left;
+}
+ul.topnav li.center-options {
+    background-color: rgb(52, 193, 5);
+    list-style: none;
+    float: none;
+    flex: 1;
+    display: flex;
+    justify-content:center;
+}
+ul.topnav li.right-options {
+    background-color: rgb(52, 193, 5);
+    list-style: none;
+    float: none;
+    flex: 1;
+    display: flex;
+    justify-content:right;
+}
+
+ul.topnav li a{
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 16px;
+    color: rgb(181, 181, 181); 
+}
+ul.topnav li a:hover {
+    background-color: #0080ff;
+    color: rgb(255, 255, 255);
+    transition: 1s;
+}

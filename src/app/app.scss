@@ -1,0 +1,60 @@
+.app-main{
+    width: 100%;
+    height: 100%;
+    background-color: #2c009c;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    var(--color-cyan),
+    var(--color-blue-bright),
+    var(--color-purple)
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-quote {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 5.75rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin: 0;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    var(--color-cyan) 35%,
+    var(--color-blue-bright) 65%,
+    var(--color-purple) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  background-size: 180% 180%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
