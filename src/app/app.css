@@ -1,0 +1,4 @@
+/* Angular app component styles */
+:host {
+  display: block;
+}
