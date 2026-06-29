@@ -96,9 +96,15 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  height: 100%;
 }
 
 .nav-links a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
   color: var(--color-text-muted);
   font-size: var(--text-sm);
   font-weight: 600;
@@ -108,7 +114,8 @@
 
   padding: 0 0.9rem;
 
-  border-radius: 999px;
+  border-radius: 10px;
+  min-height: 40px;
 }
 
 .nav-links a:hover {
