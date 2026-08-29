@@ -6,8 +6,8 @@ import { NavBar } from '../../navbar/navbar';
 type JournalStatus = 'Shipped' | 'In progress' | 'Research';
 interface JournalEntry { id: number; date: string; title: string; summary: string; project: string; status: JournalStatus; tags: string[]; duration: string; }
 
-@Component({ selector: 'app-projects', imports: [CommonModule, FormsModule, NavBar], templateUrl: './projects.html', styleUrl: './projects.scss' })
-export class ProjectsComponent implements OnInit {
+@Component({ selector: 'app-journal', imports: [CommonModule, FormsModule, NavBar], templateUrl: './journal.html', styleUrl: './journal.scss' })
+export class JournalComponent implements OnInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly storageKey = 'jd-engineering-journal';
   searchTerm = ''; activeFilter = 'All entries'; showComposer = false; submitted = false;

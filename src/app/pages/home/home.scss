@@ -58,3 +58,56 @@
     background-position: 0% 50%;
   }
 }
+
+.featured-projects {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.featured-projects .media-card-button {
+  flex: 1 1 0;
+}
+
+.project-split-card {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.project-logo-panel {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  border-right: 1px solid var(--color-border);
+  background: rgba(0, 164, 220, 0.08);
+}
+
+.project-logo-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.project-card-title {
+  margin: 0.5rem 0;
+  font: 600 1.5rem var(--font-heading);
+}
+
+.nextcloud-logo-panel {
+  background: rgba(0, 164, 220, 0.08);
+}
+
+@media (max-width: 760px) {
+  .featured-projects {
+    flex-direction: column;
+  }
+}

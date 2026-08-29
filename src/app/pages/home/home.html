@@ -1,8 +1,8 @@
 <main class="page-shell section">
-  <div>
+  <!-- <div>
     <app-navbar></app-navbar>
-  </div>
-
+  </div> -->
+  <app-navbar />
   <div class="animate-down">
     <p class="eyebrow">HOME</p>
     
@@ -30,15 +30,35 @@
 
   <div class="section-divider"></div>
 
-  <a
-    href="http://media.thejdsuite.com"
-    class="card card-hover media-card-button"
-    style="margin-top: 2rem; padding: 1.5rem; max-width: 360px; text-align: left; display: block; text-decoration: none;"
-  >
-    <p class="eyebrow">Featured Project</p>
-    <h2 style="margin: 0.5rem 0;">Media Server</h2>
-    <p class="body-copy">
-      My private self-hosted media library.
-    </p>
-  </a>
+  <div class="featured-projects">
+    <a
+      href="http://media.thejdsuite.com"
+      class="card card-hover media-card-button project-split-card"
+      style="margin-top: 2rem; max-width: 360px; text-align: left; text-decoration: none;"
+    >
+      <span class="project-logo-panel jellyfin-logo-panel">
+        <img src="jellyfin-logo.svg" alt="Jellyfin logo">
+      </span>
+      <span class="project-card-content">
+        <span class="eyebrow">Featured Project</span>
+        <span class="project-card-title">Media Server</span>
+        <span class="body-copy">My private self-hosted media library.</span>
+      </span>
+    </a>
+
+    <a
+      href="http://cloud.thejdsuite.com"
+      class="card card-hover media-card-button project-split-card"
+      style="margin-top: 2rem; max-width: 360px; text-align: left; text-decoration: none;"
+    >
+      <span class="project-logo-panel nextcloud-logo-panel">
+        <img src="nextcloud-logo-dark-cyan.svg" alt="Nextcloud logo">
+      </span>
+      <span class="project-card-content">
+        <span class="eyebrow">Featured Project</span>
+        <span class="project-card-title">Cloud Server</span>
+        <span class="body-copy">My private self-hosted cloud server.</span>
+      </span>
+    </a>
+  </div>
 </main>
