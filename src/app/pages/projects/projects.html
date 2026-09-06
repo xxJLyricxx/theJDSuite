@@ -1,61 +1,9 @@
-<main class="page-shell journal-page page-load">
-  <app-navbar />
-  <section class="journal-hero">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="pulse-dot"></span> Build log / 2026</p>
-      <h1>Engineering<br><span>Journal.</span></h1>
-      <p>A working record of what I build, the problems I find, and the decisions that shape each system.</p>
+<main class="page-shell section">
+    <div>
+        <app-navbar></app-navbar>
     </div>
-    <div class="hero-actions">
-      <button class="btn btn-primary new-entry" type="button" (click)="openComposer()"><span aria-hidden="true">+</span> New journal entry</button>
-      <p>Stored locally in this browser</p>
+    <p class="eyebrow">PROJECTS</p>
+    <div>
+        <app-coming-soon></app-coming-soon>
     </div>
-  </section>
-  <section class="stats-grid" aria-label="Journal summary">
-    <article><span class="stat-label">Total entries</span><strong>{{ entries.length | number:'2.0' }}</strong><small>documented builds</small></article>
-    <article><span class="stat-label">Things shipped</span><strong>{{ shippedCount | number:'2.0' }}</strong><small>moved to production</small></article>
-    <article class="principle"><span class="stat-label">Current principle</span><blockquote>“Make it work. Make it clear. Then make it fast.”</blockquote></article>
-  </section>
-  <section class="entries-section">
-    <div class="entries-heading">
-      <div><p class="eyebrow">The archive</p><h2>Latest entries</h2></div>
-      <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search journal</span><input type="search" placeholder="Search notes, projects, tags..." [(ngModel)]="searchTerm"></label>
-    </div>
-    <div class="filter-row" aria-label="Filter journal entries">
-      @for (filter of filters; track filter) { <button type="button" [class.active]="activeFilter === filter" (click)="setFilter(filter)">{{ filter }}</button> }
-    </div>
-    <div class="entry-list">
-      @for (entry of filteredEntries; track entry.id) {
-        <article class="entry-card">
-          <div class="entry-date"><span>{{ formatDate(entry.date).split(',')[0] }}</span><small>{{ formatDate(entry.date).split(',')[1] }}</small></div>
-          <div class="entry-body">
-            <div class="entry-meta"><span class="status" [class]="'status ' + entry.status.toLowerCase().replace(' ', '-')"><i></i>{{ entry.status }}</span><span>{{ entry.project }}</span>@if (entry.duration) { <span>{{ entry.duration }}</span> }</div>
-            <h3>{{ entry.title }}</h3><p>{{ entry.summary }}</p>
-            <div class="tag-list">@for (tag of entry.tags; track tag) { <span>#{{ tag }}</span> }</div>
-          </div><span class="entry-arrow" aria-hidden="true">↗</span>
-        </article>
-      } @empty { <div class="empty-state"><span>⌕</span><h3>No matching entries</h3><p>Try another search or clear the active filter.</p></div> }
-    </div>
-  </section>
-  <footer class="journal-footer"><span>JD / ENGINEERING JOURNAL</span><span>DOCUMENT THE WORK. COMPOUND THE LEARNING.</span></footer>
 </main>
-@if (showComposer) {
-  <div class="modal-backdrop" (click)="closeComposer()">
-    <section class="composer" role="dialog" aria-modal="true" aria-labelledby="composer-title" (click)="$event.stopPropagation()">
-      <div class="composer-header"><div><p class="eyebrow">Add to the archive</p><h2 id="composer-title">New journal entry</h2></div><button type="button" aria-label="Close" (click)="closeComposer()">×</button></div>
-      <form (ngSubmit)="saveEntry()" novalidate>
-        <label>Title <input name="title" [(ngModel)]="newEntry.title" placeholder="What did you work on?" [class.invalid]="submitted && !newEntry.title.trim()"></label>
-        <label>Summary <textarea name="summary" [(ngModel)]="newEntry.summary" rows="4" placeholder="Capture the problem, approach, and outcome..." [class.invalid]="submitted && !newEntry.summary.trim()"></textarea></label>
-        <div class="form-grid">
-          <label>Project <input name="project" [(ngModel)]="newEntry.project" placeholder="The JD Suite"></label>
-          <label>Status <select name="status" [(ngModel)]="newEntry.status"><option>In progress</option><option>Shipped</option><option>Research</option></select></label>
-          <label>Date <input type="date" name="date" [(ngModel)]="newEntry.date"></label>
-          <label>Time spent <input name="duration" [(ngModel)]="newEntry.duration" placeholder="2h 30m"></label>
-        </div>
-        <label>Tags <input name="tags" [(ngModel)]="newEntry.tagsInput" placeholder="Angular, Design, DevOps"></label>
-        @if (submitted && (!newEntry.title.trim() || !newEntry.summary.trim())) { <p class="form-error">Add a title and summary to save this entry.</p> }
-        <div class="form-actions"><button class="btn btn-secondary" type="button" (click)="closeComposer()">Cancel</button><button class="btn btn-primary" type="submit">Save entry</button></div>
-      </form>
-    </section>
-  </div>
-}
