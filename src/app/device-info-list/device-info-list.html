@@ -1,0 +1,17 @@
+<ul class="info-list" aria-label="Device information">
+  @for (item of items(); track item.id) {
+    <li class="info-card">
+      @if (item.logo) {
+        <img class="info-logo" [src]="'assets/images/' + item.logo" alt="" />
+        <span class="info-divider" aria-hidden="true"></span>
+      }
+      <div class="info-content">
+        @if (item.label) {
+          <p class="info-label">{{ item.label }}</p>
+        }
+        <h3>{{ item.title }}</h3>
+        <p class="info-description">{{ item.description }}</p>
+      </div>
+    </li>
+  }
+</ul>

@@ -1,14 +1,14 @@
 .coming-soon-page {
-  min-height: calc(100vh - 80px);
+  min-height: var(--coming-soon-min-height, calc(100vh - 80px));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1.5rem;
+  padding: var(--coming-soon-page-padding, 4rem 1.5rem);
 }
 
 .coming-soon-card {
   width: min(100%, 720px);
-  padding: 3rem;
+  padding: var(--coming-soon-card-padding, 3rem);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 28px;
 
@@ -44,7 +44,7 @@
 .coming-soon-card h1 {
   margin: 0;
   color: var(--color-text);
-  font-size: clamp(2.2rem, 5vw, 4.25rem);
+  font-size: var(--coming-soon-heading-size, clamp(2.2rem, 5vw, 4.25rem));
   line-height: 1.05;
   letter-spacing: -0.04em;
 }

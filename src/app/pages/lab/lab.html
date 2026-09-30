@@ -1,0 +1,42 @@
+<main class="lab-page page-load">
+  <div class="lab-scene" aria-label="Lab devices">
+    <button class="device-button white-lotus" type="button" aria-label="WhiteLotus"
+      aria-controls="device-info" [attr.aria-expanded]="selectedDevice() === 'WhiteLotus'"
+      (click)="openDevice('WhiteLotus', $event)">
+      <img src="/assets/images/white-lotus-label.png" alt="" width="1920" height="819">
+    </button>
+    <button class="device-button lotus-sentinel" type="button" aria-label="LotusSentinel"
+      aria-controls="device-info" [attr.aria-expanded]="selectedDevice() === 'LotusSentinel'"
+      (click)="openDevice('LotusSentinel', $event)">
+      <img src="/assets/images/lotus-sentinel-label.png" alt="" width="1920" height="819">
+    </button>
+  </div>
+  <div class="page-shell section lab-navigation">
+    <app-navbar></app-navbar>
+  </div>
+  @if (selectedDevice()) {
+    <aside #infoPanel id="device-info" class="device-info" role="region"
+      aria-labelledby="device-title" tabindex="-1" [class.fading-out]="fadingOut()">
+      <div class="panel-heading">
+        <h2 id="device-title">
+          @if (selectedDevice() === 'WhiteLotus') {
+            <span class="title-white">White</span><span class="title-blue">Lotus</span>
+          } @else {
+            <span class="title-white">Lotus</span><span class="title-blue">Sentinel</span>
+          }
+        </h2>
+        <button type="button" class="close-panel" aria-label="Close device information"
+          (click)="closeDevice()">&times;</button>
+      </div>
+      <div class="device-info-scroll">
+        @if (selectedDevice() === 'LotusSentinel') {
+          <app-device-info-list [items]="lotusSentinelFeatures"></app-device-info-list>
+        } @else {
+          <app-device-info-list></app-device-info-list>
+        }
+      </div>
+    </aside>
+  } @else {
+    <img class="lab-welcome" src="/assets/images/lab-welcome.png" alt="JD Suite" width="1856" height="833">
+  }
+</main>
