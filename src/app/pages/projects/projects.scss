@@ -54,6 +54,21 @@
   box-shadow: 0 0 16px rgba(34, 211, 238, 0.7);
 }
 
+.summary-list li.curr::before {
+  background: rgb(34, 197, 94);
+  box-shadow: 0 0 16px rgba(34, 197, 94, 0.7);
+}
+
+.summary-list li.hold::before {
+  background: rgb(234, 179, 8);
+  box-shadow: 0 0 16px rgba(234, 179, 8, 0.7);
+}
+
+.summary-list li.focus::before {
+  background: rgb(59, 130, 246);
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.7);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
