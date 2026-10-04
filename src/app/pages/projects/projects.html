@@ -1,9 +1,145 @@
-<main class="page-shell section">
-    <div>
-        <app-navbar></app-navbar>
+<main class="page-shell section projects-page">
+  <app-navbar></app-navbar>
+
+  <header class="projects-hero">
+    <div class="projects-intro">
+      <p class="eyebrow">Projects</p>
+      <h1 class="heading-xl">The systems that make up the JD Suite.</h1>
+      <p class="body-copy">
+        The collection of applications and systems that I've designed.
+      </p>
     </div>
-    <p class="eyebrow">PROJECTS</p>
-    <div>
-        <app-coming-soon></app-coming-soon>
-    </div>
+
+    <aside class="card projects-summary">
+      <p class="eyebrow">Current focus</p>
+      <ul class="summary-list">
+        <li>Media access and archival</li>
+        <li>Private cloud and file backup</li>
+        <li>Monitoring and service health</li>
+        <li>Automation and self-hosting</li>
+      </ul>
+    </aside>
+  </header>
+
+  <section class="projects-grid" aria-label="Project overview">
+    <article class="card project-card project-card--core">
+      <div class="project-card__brand project-card__brand--lotus">
+        <span class="brand-mark">JD</span>
+      </div>
+      <div class="project-card__content">
+        <p class="eyebrow">Primary host</p>
+        <h2>WhiteLotus</h2>
+        <p class="project-card__body">
+          Ubuntu Server runs the main services layer for media, storage, and automation on a dedicated home lab setup.
+        </p>
+        <ul class="project-tags">
+          <li>Ubuntu</li>
+          <li>Docker</li>
+          <li>Storage</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="card project-card project-card--monitoring">
+      <div class="project-card__brand project-card__brand--sentinel">
+        <span class="brand-mark">LS</span>
+      </div>
+      <div class="project-card__content">
+        <p class="eyebrow">Support node</p>
+        <h2>LotusSentinel</h2>
+        <p class="project-card__body">
+          A lightweight Raspberry Pi layer focused on monitoring, DNS protection, and alerting around the rest of the network.
+        </p>
+        <ul class="project-tags">
+          <li>Raspberry Pi</li>
+          <li>Uptime Kuma</li>
+          <li>AdGuard</li>
+        </ul>
+      </div>
+    </article>
+
+    <a
+      href="https://media.thejdsuite.com"
+      target="_blank"
+      rel="noreferrer"
+      class="card card-hover project-card project-card--link project-card--media"
+      aria-label="Open Jellyfin media server"
+    >
+      <div class="project-card__brand project-card__brand--media">
+        <img src="/assets/images/jellyfin-logo.svg" alt="Jellyfin logo" />
+      </div>
+      <div class="project-card__content">
+        <p class="eyebrow">Media library</p>
+        <h2>Jellyfin</h2>
+        <p class="project-card__body">
+          My movie and show library, served with direct access and a focus on local-first playback.
+        </p>
+        <ul class="project-tags">
+          <li>Streaming</li>
+          <li>Docker</li>
+          <li>Home media</li>
+        </ul>
+      </div>
+    </a>
+
+    <a
+      href="https://cloud.thejdsuite.com"
+      target="_blank"
+      rel="noreferrer"
+      class="card card-hover project-card project-card--link project-card--cloud"
+      aria-label="Open Nextcloud private cloud"
+    >
+      <div class="project-card__brand project-card__brand--cloud">
+        <img src="/assets/images/nextcloud-logo-dark-cyan.svg" alt="Nextcloud logo" />
+      </div>
+      <div class="project-card__content">
+        <p class="eyebrow">File access</p>
+        <h2>Nextcloud</h2>
+        <p class="project-card__body">
+          Private cloud storage for documents, media, and shared access without depending on a third-party provider.
+        </p>
+        <ul class="project-tags">
+          <li>Private cloud</li>
+        </ul>
+      </div>
+    </a>
+
+    <a
+      href="https://photos.thejdsuite.com"
+      target="_blank"
+      rel="noreferrer"
+      class="card card-hover project-card project-card--link project-card--photos"
+      aria-label="Open Immich photo library"
+    >
+      <div class="project-card__brand project-card__brand--photos">
+        <img src="/assets/images/immich-logo-stacked-light.svg" alt="Immich logo" />
+      </div>
+      <div class="project-card__content">
+        <p class="eyebrow">Photo archive</p>
+        <h2>Immich</h2>
+        <p class="project-card__body">
+          Photo and video backup with a cleaner, more organized personal archive than a typical cloud sync flow.
+        </p>
+        <ul class="project-tags">
+          <li>Photo Backup</li>
+        </ul>
+      </div>
+    </a>
+
+    <article class="card project-card project-card--automation">
+      <div class="project-card__brand project-card__brand--ha">
+        <img src="/assets/images/home-assistant.svg" alt="Home Assistant logo" />
+      </div>
+      <div class="project-card__content">
+        <p class="eyebrow">Home Automation</p>
+        <h2>Home Assistant</h2>
+        <p class="project-card__body">
+          Smart home automation and scene orchestration to make 3rd party networks easier to manage.
+        </p>
+        <ul class="project-tags">
+          <li>Home Automation</li>
+        </ul>
+      </div>
+    </article>
+  </section>
 </main>
