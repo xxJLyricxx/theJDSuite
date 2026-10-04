@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="343" height="168" viewBox="0 0 343 168" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="171.5" y1="0" x2="171.5" y2="168" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0E233A"/>
+      <stop offset="0.56" stop-color="#0A1B2F"/>
+      <stop offset="1" stop-color="#07121F"/>
+    </linearGradient>
+    <linearGradient id="bridge" x1="86" y1="77" x2="260" y2="77" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B9D7EE"/>
+      <stop offset="0.5" stop-color="#F4F8FC"/>
+      <stop offset="1" stop-color="#A8C7E4"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="44" x2="0" y2="98" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5AA9FF"/>
+      <stop offset="1" stop-color="#2477D8"/>
+    </linearGradient>
+    <linearGradient id="water" x1="171.5" y1="109" x2="171.5" y2="168" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E3156" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#06111E" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="reflection" x1="171.5" y1="109" x2="171.5" y2="165" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#59B3FF" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#1B5D9D" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="343" height="168" rx="0" fill="url(#bg)"/>
+
+  <!-- distant mountains -->
+  <path d="M0 37L20 33L34 35L47 41L61 45L75 44L90 48L109 52L123 58L142 61L156 66L175 66L193 61L212 55L231 49L249 47L264 43L279 41L297 36L315 30L343 21V111H0V37Z" fill="#0A1A2A" opacity="0.96"/>
+  <path d="M0 78L23 69L49 70L76 79L100 77L120 81L143 88L164 86L183 83L206 82L228 77L249 74L270 78L292 74L320 71L343 72V113H0V78Z" fill="#071421" opacity="0.92"/>
+
+  <!-- finance line -->
+  <path d="M23 85C39 74 50 82 64 69C77 57 92 67 105 61C120 53 134 51 148 56C167 63 179 58 193 50C209 41 223 43 238 39C254 34 267 24 281 23C300 20 317 27 343 19" stroke="#4F9BE8" stroke-width="1.4" opacity="0.72"/>
+  <circle cx="65" cy="69" r="2.7" fill="#61B1FF" filter="url(#glow)"/>
+  <circle cx="260" cy="28" r="2.7" fill="#61B1FF" filter="url(#glow)"/>
+
+  <!-- bars -->
+  <rect x="159" y="69" width="11" height="29" rx="1" fill="url(#bar)"/>
+  <rect x="176" y="57" width="11" height="41" rx="1" fill="url(#bar)"/>
+  <rect x="194" y="44" width="11" height="54" rx="1" fill="url(#bar)"/>
+
+  <!-- bridge deck glow -->
+  <rect x="60" y="105" width="225" height="2" fill="#4FA8FF" opacity="0.25" filter="url(#soft)"/>
+
+  <!-- bridge deck -->
+  <path d="M73 106H272" stroke="url(#bridge)" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- towers -->
+  <path d="M124 57V108M219 57V108" stroke="url(#bridge)" stroke-width="8" stroke-linecap="square"/>
+  <path d="M120 57H128M215 57H223" stroke="#F0F6FB" stroke-width="2"/>
+
+  <!-- suspension cables -->
+  <path d="M124 59C113 79 99 91 82 98C73 101 64 103 53 104" stroke="url(#bridge)" stroke-width="3.1" stroke-linecap="round"/>
+  <path d="M124 59C135 79 151 91 172 96C191 100 208 85 219 59" stroke="url(#bridge)" stroke-width="3.1" stroke-linecap="round"/>
+  <path d="M219 59C231 80 245 92 262 99C272 103 282 104 291 104" stroke="url(#bridge)" stroke-width="3.1" stroke-linecap="round"/>
+
+  <!-- hanger cables -->
+  <path d="M92 91V106M104 82V106M144 85V106M156 92V106M187 92V106M200 83V106M241 84V106M252 93V106" stroke="#A6C6E1" stroke-width="1.2" opacity="0.72"/>
+
+  <!-- under-bridge body -->
+  <path d="M93 107C103 114 114 117 124 118C135 119 147 119 158 119H184C196 119 208 119 219 118C231 117 242 114 251 107" stroke="#7AA7CA" stroke-width="1.7" opacity="0.5"/>
+
+  <!-- water -->
+  <rect y="109" width="343" height="59" fill="url(#water)"/>
+  <rect x="0" y="109" width="343" height="2" fill="#3C86BF" opacity="0.35"/>
+
+  <!-- reflections -->
+  <path d="M120 111L116 157M128 111L132 156M216 111L211 158M224 111L229 156" stroke="url(#reflection)" stroke-width="4" opacity="0.52"/>
+  <path d="M161 111L157 163M169 111L171 163M180 111L176 160M199 111L194 163M205 111L210 162" stroke="url(#reflection)" stroke-width="3" opacity="0.45"/>
+
+  <!-- water streaks -->
+  <g stroke-linecap="round">
+    <path d="M16 121H116M134 121H239M255 121H326" stroke="#4F9BE8" stroke-width="1.2" opacity="0.36"/>
+    <path d="M36 129H155M170 129H286" stroke="#3779B8" stroke-width="1" opacity="0.28"/>
+    <path d="M5 139H96M112 139H225M246 139H339" stroke="#2A6599" stroke-width="1" opacity="0.24"/>
+    <path d="M56 149H146M162 149H273" stroke="#2A5C89" stroke-width="1" opacity="0.2"/>
+    <path d="M99 116H239" stroke="#65B6FF" stroke-width="1.2" opacity="0.35" filter="url(#glow)"/>
+  </g>
+
+  <!-- subtle horizon glow -->
+  <ellipse cx="172" cy="110" rx="116" ry="7" fill="#3D9AE8" opacity="0.12" filter="url(#soft)"/>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+<title>Budget Bridge</title>
+<desc>Budget Bridge logo with a suspension bridge and rising financial bar chart.</desc>
+<defs>
+  <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#55c7ff"/>
+    <stop offset="1" stop-color="#1685e6"/>
+  </linearGradient>
+  <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset=".55" stop-color="#f5f8fc"/>
+    <stop offset="1" stop-color="#b9c8d8"/>
+  </linearGradient>
+</defs>
+
+<!-- financial bars -->
+<g fill="url(#blue)" stroke="#73dcff" stroke-width="3">
+  <path d="M550 430h58v82c-19-10-39-23-58-38z"/>
+  <path d="M628 378h58v155c-19-1-39-5-58-10z"/>
+  <path d="M706 330h58v183c-19 8-39 14-58 17z"/>
+  <path d="M784 278h58v167c-18 18-38 34-58 47z"/>
+</g>
+
+<!-- bridge deck -->
+<path d="M205 560
+ C330 553 430 548 500 548
+ C575 548 615 550 700 550
+ C785 550 825 548 900 548
+ C970 548 1070 553 1195 560
+ C1080 570 985 573 910 574
+ C835 575 790 568 700 568
+ C610 568 565 575 490 574
+ C415 573 320 570 205 560Z"
+ fill="url(#silver)"/>
+
+<!-- towers -->
+<path d="M465 350h38v292h-38zM897 350h38v292h-38z" fill="url(#silver)"/>
+
+<!-- main suspension cable -->
+<path d="M210 557
+ C340 540 405 465 484 392
+ C555 480 622 520 700 522
+ C778 520 845 480 916 392
+ C995 465 1060 540 1190 557"
+ fill="none" stroke="url(#silver)" stroke-width="18" stroke-linecap="round"/>
+
+<!-- vertical suspension cables -->
+<g stroke="url(#silver)" stroke-width="6">
+  <path d="M375 500v54"/>
+  <path d="M430 448v106"/>
+  <path d="M540 447v108"/>
+  <path d="M595 490v65"/>
+  <path d="M805 490v65"/>
+  <path d="M860 447v108"/>
+  <path d="M970 448v106"/>
+  <path d="M1025 500v54"/>
+</g>
+
+<!-- text -->
+<text x="700" y="785" text-anchor="middle"
+ font-family="Arial, Helvetica, sans-serif" font-size="142" font-weight="500" letter-spacing="-6">
+ <tspan fill="url(#silver)">Budget </tspan><tspan fill="url(#blue)">Bridge</tspan>
+</text>
+</svg>
