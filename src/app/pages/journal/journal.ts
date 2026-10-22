@@ -32,6 +32,7 @@ export class JournalComponent implements OnInit {
 
     this.expandedEntryIds.add(entryId);
   }
+  
 
   ngOnInit() {
     this.journalService.getEntries().subscribe({
