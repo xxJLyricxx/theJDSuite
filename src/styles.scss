@@ -89,10 +89,14 @@ body {
   margin: 0;
   font-family: var(--font-body);
   background:
-    radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 32rem),
+    radial-gradient(circle at top right, var(--page-top-right-glow, rgba(37, 99, 235, 0.18)), transparent 32rem),
     radial-gradient(circle at top left, rgba(34, 211, 238, 0.08), transparent 28rem),
     linear-gradient(135deg, var(--color-bg), var(--color-bg-deep));
   color: var(--color-text);
+}
+
+body:has(app-about) {
+  --page-top-right-glow: transparent;
 }
 
 img {

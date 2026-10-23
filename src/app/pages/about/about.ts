@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { NavBar } from "../../navbar/navbar";
-import { ComingSoonComponent } from "../../coming-soon/coming-soon";
 @Component({
   selector: 'app-about',
-  imports: [NavBar, ComingSoonComponent],
+  imports: [NavBar],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
