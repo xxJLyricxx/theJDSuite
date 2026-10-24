@@ -1,6 +1,11 @@
 :host { display: block; }
-.journal-page { padding-bottom: 2rem; }
-.journal-hero { min-height: 31rem; padding: 7rem 1rem 5rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem; position: relative; }
+.journal-hero { 
+  display: flex; 
+  align-items: flex-end; 
+  justify-content: space-between; 
+  gap: 3rem; 
+  position: relative; 
+}
 .journal-hero::before { content: ''; position: absolute; width: 28rem; height: 28rem; left: 20%; top: 0; background: radial-gradient(circle, rgba(14,165,255,.1), transparent 67%); pointer-events: none; }
 .hero-copy { max-width: 760px; }
 .hero-copy .eyebrow { display: flex; align-items: center; gap: .55rem; }

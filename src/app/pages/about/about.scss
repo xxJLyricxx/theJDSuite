@@ -1,7 +1,8 @@
-#jd-about-concept {
+#about-hero {
   --ink:#edf4ff;
   --soft:#b9c8dc;
   --blue:#72baff;
+  --moreblue: #2996fd;
   --silver:#dfe8f5;
   --panel:#0d1827;
   --line:#233a52;
@@ -10,52 +11,55 @@
   font-size:17px;
   line-height:1.7;
 }
-#jd-about-concept a {
+#about-hero a {
   text-decoration:none;
 }
-#jd-about-concept main {
+#about-hero main {
   padding:0 7%;
 }
-#jd-about-concept .opening {
-  padding:80px 0 62px;
+#about-hero .opening {
+  padding-top: 1rem;
   display:grid;
   grid-template-columns:1.6fr 1fr;
   gap:52px;
   align-items:center;
 }
-#jd-about-concept .eyebrow {
+#about-hero .eyebrow {
   font-size:12px;
   letter-spacing:0.22em;
-  color:var(--blue);
   text-transform:uppercase;
   margin:0 0 20px;
   font-weight:700;
 }
-#jd-about-concept h1 {
+#about-hero h1 {
   font-size:clamp(38px, 5vw, 62px);
   line-height:1.08;
   font-weight:600;
   letter-spacing:-1.8px;
   margin:0 0 28px;
 }
-#jd-about-concept h1 span {
+#about-hero h1 span {
   color:var(--blue);
 }
-#jd-about-concept .lead {
+#about-hero .lead .impact{
+  color:var(--moreblue);
+}
+
+#about-hero .lead {
   font-size:1.16em;
   line-height:1.5;
   color:var(--silver);
   margin-bottom:22px;
 }
-#jd-about-concept p {
+#about-hero p {
   color:var(--soft);
   margin:14px 0;
   font-size:1em;
 }
-#jd-about-concept p span {
+#about-hero p span {
   color:var(--blue);
 }
-#jd-about-concept .identity {
+#about-hero .identity {
   padding:30px 0 30px 32px;
   border-left:1px solid #34516d;
   align-self:stretch;
@@ -63,7 +67,7 @@
   flex-direction:column;
   justify-content:center;
 }
-#jd-about-concept .monogram {
+#about-hero .monogram {
   font-size:76px;
   line-height:1;
   letter-spacing:-5px;
@@ -71,142 +75,148 @@
   margin-bottom:24px;
   font-weight:700;
 }
-#jd-about-concept .identity strong {
+#about-hero .identity strong {
   font-size:1.38rem;
   font-weight:600;
   color:var(--ink);
 }
-#jd-about-concept .identity p {
+#about-hero .identity p {
   font-size:0.82rem;
   line-height:1.8;
   max-width:22ch;
 }
-#jd-about-concept .identity .line {
+#about-hero .identity .line {
   width:52px;
   height:2px;
   background:var(--blue);
   margin:18px 0 22px;
 }
-#jd-about-concept section.content {
+#about-hero section.content {
   border-top:1px solid var(--line);
   padding:48px 0;
 }
-#jd-about-concept h2 {
+#about-hero h2 {
   font-size:clamp(28px, 3vw, 36px);
   line-height:1.2;
   font-weight:600;
   margin:0 0 18px;
   letter-spacing:-0.04em;
 }
-#jd-about-concept h3 {
+#about-hero h3 {
   font-size:1.2rem;
   font-weight:600;
   color:var(--ink);
   margin:0 0 10px;
 }
-#jd-about-concept .section-heading {
+#about-hero .section-heading {
   display:flex;
   justify-content:space-between;
   align-items:end;
   gap:20px;
   margin-bottom:28px;
 }
-#jd-about-concept .section-heading p {
+#about-hero .section-heading p {
   font-size:0.76rem;
   letter-spacing:0.12em;
   text-transform:uppercase;
   color:var(--soft);
   margin:0;
 }
-#jd-about-concept .path {
+#about-hero .path {
   display:grid;
   grid-template-columns:repeat(4, minmax(0, 1fr));
   gap:24px;
 }
-#jd-about-concept .step {
+#about-hero .step {
   border-top:1px solid #38506a;
   padding-top:20px;
 }
-#jd-about-concept .number {
+#about-hero .number {
   font-size:0.76rem;
   letter-spacing:0.18em;
   color:var(--blue);
   margin-bottom:14px;
   font-weight:700;
 }
-#jd-about-concept .step p {
+#about-hero .step p {
   font-size:0.96rem;
   line-height:1.7;
 }
-#jd-about-concept .approach {
+#about-hero .approach {
   display:grid;
   grid-template-columns:1fr 1.7fr;
   gap:54px;
   align-items:start;
 }
-#jd-about-concept .approach p {
+#about-hero .approach p {
   margin-top:0;
 }
-#jd-about-concept .profile {
+#about-hero .profile {
   display:grid;
   grid-template-columns:repeat(2, minmax(0, 1fr));
   gap:16px;
 }
-#jd-about-concept .skill {
+#about-hero .skill {
   padding:26px 24px 22px;
   background:var(--panel);
   border:1px solid #223549;
   border-radius:8px;
   box-shadow:0 12px 24px rgba(8,15,27,0.12);
 }
-#jd-about-concept .skill p {
+#about-hero .skill p {
   font-size:0.96rem;
   margin:0 0 16px;
 }
-#jd-about-concept .tools {
+#about-hero .tools {
   color:var(--blue);
   font-size:0.72rem;
   letter-spacing:0.08em;
   text-transform:uppercase;
   line-height:1.6;
 }
-#jd-about-concept .skill:last-child {
+#about-hero .skill:last-child {
   grid-column:1 / -1;
 }
-#jd-about-concept .suite {
+#about-hero .suite {
   display:grid;
   grid-template-columns:1.5fr 1fr;
   gap:45px;
   align-items:center;
 }
-#jd-about-concept .links {
+#about-hero .links {
   display:flex;
   gap:12px;
   flex-wrap:wrap;
   justify-content:flex-start;
 }
-#jd-about-concept .links a {
+#about-hero .links a {
   padding:12px 18px;
   border:1px solid #396081;
   border-radius:6px;
   font-size:0.84rem;
   letter-spacing:0.04em;
-  color:var(--silver);
-  background:rgba(18, 31, 48, 0.8);
+  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-bright));
+  color: white;
+  box-shadow: var(--shadow-blue);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
 }
-#jd-about-concept .closing {
+#about-hero .closing {
   padding:54px 0 62px;
   text-align:center;
   border-top:1px solid var(--line);
 }
-#jd-about-concept .closing blockquote {
+#about-hero .closing blockquote {
   font-size:clamp(24px, 3vw, 38px);
   font-weight:600;
   letter-spacing:0.14em;
   margin:16px 0 0;
   color:var(--silver);
 }
-#jd-about-concept footer {
+#about-hero footer {
   padding:20px 7% 28px;
   border-top:1px solid var(--line);
   display:flex;
@@ -218,36 +228,36 @@
   text-transform:uppercase;
 }
 @media (max-width: 800px) {
-  #jd-about-concept .opening,
-  #jd-about-concept .approach,
-  #jd-about-concept .suite,
-  #jd-about-concept .path,
-  #jd-about-concept .profile {
+  #about-hero .opening,
+  #about-hero .approach,
+  #about-hero .suite,
+  #about-hero .path,
+  #about-hero .profile {
     grid-template-columns:1fr;
   }
-  #jd-about-concept .opening {
+  #about-hero .opening {
     gap:32px;
     padding:56px 0 48px;
   }
-  #jd-about-concept .identity {
+  #about-hero .identity {
     padding-left:0;
     border-left:none;
     border-top:1px solid var(--line);
     padding-top:24px;
   }
-  #jd-about-concept .path,
-  #jd-about-concept .profile {
+  #about-hero .path,
+  #about-hero .profile {
     gap:18px;
   }
-  #jd-about-concept .section-heading {
+  #about-hero .section-heading {
     display:block;
   }
 }
 @media (max-width: 650px) {
-  #jd-about-concept footer {
+  #about-hero footer {
     flex-direction:column;
   }
-  #jd-about-concept .closing blockquote {
+  #about-hero .closing blockquote {
     letter-spacing:0.08em;
   }
 }

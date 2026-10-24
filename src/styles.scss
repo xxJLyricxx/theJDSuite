@@ -95,10 +95,6 @@ body {
   color: var(--color-text);
 }
 
-body:has(app-about) {
-  --page-top-right-glow: transparent;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -124,6 +120,7 @@ select {
   width: min(100% - 2rem, var(--container-width));
   min-height: 100dvh;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 .section {
