@@ -216,17 +216,6 @@
   margin:16px 0 0;
   color:var(--silver);
 }
-#about-hero footer {
-  padding:20px 7% 28px;
-  border-top:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  color:var(--soft);
-  font-size:0.72rem;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-}
 @media (max-width: 800px) {
   #about-hero .opening,
   #about-hero .approach,
